@@ -1,0 +1,17 @@
+# app/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-app-service
+  labels:
+    app: nginx-app
+
+spec:
+  type: NodePort # NodePort so we can access it locally
+  selector:
+    app: nginx-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30080 # Fixed port for easy access
