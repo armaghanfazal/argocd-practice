@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.25 # We will change this later to see sync
+          image: nginx:1.26 # We will change this later to see sync
           ports:
             - containerPort: 80
           resources:
